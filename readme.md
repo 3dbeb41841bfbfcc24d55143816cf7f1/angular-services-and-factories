@@ -93,14 +93,15 @@ h4 {
 
 # Services vs. Factories
 
-Taken from:
-* [Service vs Factory - Once and for All](http://blog.thoughtram.io//angular/2015/07/07/service-vs-factory-once-and-for-all.html)
-* [Stack Overflow](http://stackoverflow.com/questions/13762228/confused-about-service-vs-factory)
+In AngularJS, Services and Factories offer basically the same thing - a singleton that returns either an object (Service) or a function that returns an object (Factory). So when do I use a Service and when do I use a Factory?
 
-In Summary:
+Some developers prefer using _Factories_ because they are more _functional_ and they don't require a `var that = this;` kind of statement. Other developers prefer _Services_ because they are a little simpler.
 
-* Services are treated as constructor functions (they are called with `new`). Thus they become an object.
-* Factories are treated as functions that _return_ an object.
+I have often used _Services_ for managing communications to the server (AJAX) and for any other data management (such as caching). I then use _Factories_ for the client-side domain models (User, Car, Recipe, etc.).
+
+The choice of when to use _Services_ and when to use _Factories_ is purely a developer preference.
+
+Here is a simple comparison of the syntax between _Services_ and _Factories_:
 
 ```javascript
 app.service('myService', function() {
@@ -125,3 +126,14 @@ app.factory('myFactory', function() {
   }
 });
 ```
+
+In Summary:
+
+* Services are treated as constructor functions (they are called with `new`). Thus they become an object.
+* Factories are treated as functions that _return_ an object.
+
+
+## For Further Reading:
+* [Service vs Factory - Once and for All](http://blog.thoughtram.io//angular/2015/07/07/service-vs-factory-once-and-for-all.html)
+* [Stack Overflow](http://stackoverflow.com/questions/13762228/confused-about-service-vs-factory)
+
