@@ -1,5 +1,11 @@
 # Services and Factories
 
+## First an Overview of an AngularJS Application
+
+![https://raw.githubusercontent.com/ATL-WDI-Curriculum/angular-intro/master/images/angular-architecture-large.png](https://github.com/ATL-WDI-Curriculum/angular-intro.git/)
+
+## Services and Factories Code Along
+
 This code can be found at [Codepen](http://codepen.io/drmikeh/pen/EaxgOe?editors=111)
 
 ## HTML
@@ -108,9 +114,10 @@ app.service('myService', function() {
 
   // a service is just a constructor function
   // that will be called with 'new'
+  var svc = this;
 
-  this.sayHello = function(name) {
-     return "Hi " + name + "!";
+  svc.sayHello = function(name) {
+    return "Hi " + name + "!";
   };
 });
 
@@ -123,7 +130,7 @@ app.factory('myFactory', function() {
     sayHello : function(name) {
       return "Hi " + name + "!";
     }
-  }
+  };
 });
 ```
 
