@@ -1,5 +1,21 @@
 # Services and Factories
 
+AngularJS is a client-side JavaScript SPA MVC framework. As such it provides us with set of building blocks for creating various components that fit within the AngularJS ecosystem.
+
+The AngularJS building blocks are:
+
+* modules
+* controllers
+* directives
+* services
+* factories
+* providers
+* constants
+* values
+* decorators
+
+We can combine these to build various _architectures_ for our AngularJS web applications.
+
 ## First an Overview of an AngularJS Application
 
 ![Angualr Architecture](https://raw.githubusercontent.com/ATL-WDI-Curriculum/angular-intro/master/images/angular-architecture-large.png)
