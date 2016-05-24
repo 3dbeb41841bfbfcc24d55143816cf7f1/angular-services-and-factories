@@ -2,7 +2,7 @@
 
 ## First an Overview of an AngularJS Application
 
-![https://raw.githubusercontent.com/ATL-WDI-Curriculum/angular-intro/master/images/angular-architecture-large.png](https://github.com/ATL-WDI-Curriculum/angular-intro.git/)
+![Angualr Architecture](https://raw.githubusercontent.com/ATL-WDI-Curriculum/angular-intro/master/images/angular-architecture-large.png)
 
 ## Services and Factories Code Along
 
