@@ -1,0 +1,6 @@
+[
+  { "name": "Meisha", "species": "dog", "owner": "Mike"   , "vaccinated": true },
+  { "name": "Deisel", "species": "dog", "owner": "Marc"   , "vaccinated": false },
+  { "name": "Snoopy", "species": "dog", "owner": "Charlie", "vaccinated": true },
+  { "name": "Felix" , "species": "cat", "owner": "Susan"  , "vaccinated": true }
+]

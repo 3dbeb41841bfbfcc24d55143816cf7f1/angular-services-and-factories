@@ -15,19 +15,28 @@ angular.module('petsApp')
     <button ng-click="$ctrl.removeLastPet()">Remove Last Pet</button>
 `,
   controller: function petsListCtrl(petService) {
-    this.pets = petService.pets;
+
     this.removeLastPet = petService.removeLastPet;
+
+    petService.getPets().then( (response) => {
+      this.pets = response.data;
+    });
   }
 });
 
 angular.module('petsApp')
-.service('petService', function() {
-  this.pets = [
-      { name: 'Meisha', species: 'dog', owner: 'Mike'   , vaccinated: true },
-      { name: 'Deisel', species: 'dog', owner: 'Marc'   , vaccinated: false },
-      { name: 'Snoopy', species: 'dog', owner: 'Charlie', vaccinated: true },
-      { name: 'Felix' , species: 'cat', owner: 'Susan'  , vaccinated: true }
-    ];
+.service('petService', function($http) {
+
+  this.pets = null;
+
+  this.getPets = function() {
+    let promise = $http.get('pets.json');
+    promise.then( (response) => {
+      this.pets = response.data;
+    });
+    return promise;
+  };
+
   this.removeLastPet = function() {
     this.pets.pop();
   };
