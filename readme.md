@@ -1,21 +1,45 @@
 # Services and Factories
 
+AngularJS is a client-side JavaScript SPA MVC framework. As such it provides us with set of building blocks for creating various components that fit within the AngularJS ecosystem.
+
+The AngularJS building blocks are:
+
+* modules
+* controllers
+* directives
+* services
+* factories
+* providers
+* constants
+* values
+* decorators
+
+We can combine these to build various _architectures_ for our AngularJS web applications.
+
+You can read more about the above building blocks at [Angular Providers Gist](https://gist.github.com/demisx/9605099) or at the [Angular Documentation](https://docs.angularjs.org/api/ng/type/angular.Module)
+
+## First an Overview of an AngularJS Application
+
+![Angualr Architecture](https://raw.githubusercontent.com/ATL-WDI-Curriculum/angular-intro/master/images/angular-architecture-large.png)
+
+## Services and Factories Code Along
+
 This code can be found at [Codepen](http://codepen.io/drmikeh/pen/EaxgOe?editors=111)
 
 ## HTML
 
 ```html
 <body ng-app="myApp">
-  <section ng-controller="greeterCtrl as ctrl">
+  <section ng-controller="greeterCtrl as $ctrl">
     <h1>AngularJS - Services and Factories</h1>
-    <h4 ng-repeat="message in ctrl.messages">{{ message }}</h4>
+    <h4 ng-repeat="message in $ctrl.messages">{{ message }}</h4>
   </section>
 </body>
 ```
 
 ### Observations:
 
-* We have an `ng-app` direcctive to bootstrap AngularJS.
+* We have an `ng-app` directive to bootstrap our AngularJS application.
 * We have an `ng-controller` directive to bind our view to a controller called `greeterCtrl`.
 * We are using the _controller as_ syntax for our controller binding.
 * We have an `ng-repeat` to display all of our messages.
@@ -108,9 +132,10 @@ app.service('myService', function() {
 
   // a service is just a constructor function
   // that will be called with 'new'
+  var svc = this;
 
-  this.sayHello = function(name) {
-     return "Hi " + name + "!";
+  svc.sayHello = function(name) {
+    return "Hi " + name + "!";
   };
 });
 
@@ -123,7 +148,7 @@ app.factory('myFactory', function() {
     sayHello : function(name) {
       return "Hi " + name + "!";
     }
-  }
+  };
 });
 ```
 

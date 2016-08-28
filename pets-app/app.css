@@ -1,0 +1,33 @@
+* {
+  text-align: center;
+}
+
+ul, li {
+  text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: blue;
+}
+
+.pets-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pets {
+  padding: 10px;
+  max-width: 50%;
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+li {
+  margin: 10px;
+}
+
+button {
+  margin: 10px;
+  background-color: lightblue;
+}
