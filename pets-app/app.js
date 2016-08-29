@@ -29,6 +29,7 @@ angular.module('petsApp')
 
   this.pets = null;
 
+  // here we both cache the pets and return a promise!
   this.getPets = function() {
     let promise = $http.get('pets.json');
     promise.then( (response) => {
