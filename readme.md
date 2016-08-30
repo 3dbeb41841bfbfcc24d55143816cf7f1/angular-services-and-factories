@@ -159,6 +159,7 @@ In Summary:
 
 
 ## For Further Reading:
+
+* [Factory vs. Service](https://toddmotto.com/factory-versus-service)
 * [Service vs Factory - Once and for All](http://blog.thoughtram.io//angular/2015/07/07/service-vs-factory-once-and-for-all.html)
 * [Stack Overflow](http://stackoverflow.com/questions/13762228/confused-about-service-vs-factory)
-
